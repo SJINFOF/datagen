@@ -1,0 +1,5 @@
+# Count table rows
+count 'hisdata5g'
+
+# Time range query
+scan 'hisdata5g', {LIMIT => 10, STARTROW => '7000000201001010900', ENDROW => '7000000201101010900'}
