@@ -1,3 +1,7 @@
+.idea
+/data/
+/spark-warehouse
+*.iml
 # Compile products
 *.pyc
 *.class

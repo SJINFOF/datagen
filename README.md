@@ -1,2 +1,3 @@
 # datagen
-Random data generator
+
+Import csv data to HBase and MongoDB
