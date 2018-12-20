@@ -35,6 +35,11 @@ object HBaseImport {
     if (Settings.DropHBaseTableBeforeImport) {
       admin.disableTable(tableName)
       admin.deleteTable(tableName)
+      val tableDesc = TableDescriptorBuilder
+        .newBuilder(tableName)
+        .setColumnFamily(ColumnFamilyDescriptorBuilder.of("data"))
+        .build()
+      admin.createTable(tableDesc)
     }
 
     val jobConf = new JobConf(conf)
